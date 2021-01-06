@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
-import { v4 as uuid } from 'uuid';
+import { Todo } from '../App';
 
 export default function TodoInput() {
 
-  const todoObj = {
-    id: uuid(),
-    description: '',
-    idDone: false
-  }
+  const todoObj: Todo = new Todo();
 
   const [todo, setTodo] = useState(todoObj);
 
