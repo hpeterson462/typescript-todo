@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import { v4 as uuid } from 'uuid';
 
 export default function TodoInput() {
 
   const todoObj = {
-    id: 1,
+    id: uuid(),
     description: '',
     idDone: false
   }
