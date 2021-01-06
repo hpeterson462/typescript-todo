@@ -14,7 +14,7 @@ export default function TodoList() {
       description: 'Wash dishes',
       isDone: true
     }
-  ]
+  ];
 
   return (
     <div>
