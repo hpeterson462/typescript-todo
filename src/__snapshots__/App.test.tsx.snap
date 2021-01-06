@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders App 1`] = `
+<DocumentFragment>
+  <div>
+    <header>
+      <h1>
+        Todo List
+      </h1>
+    </header>
+    <form
+      id="todo-input"
+    >
+      <input
+        name="todo"
+        placeholder="Add new item"
+        type="text"
+        value=""
+      />
+      <button
+        type="submit"
+      >
+        Add
+      </button>
+    </form>
+    <div>
+      <h2>
+        Todo
+      </h2>
+      <ul>
+        <li>
+          <input
+            type="checkbox"
+          />
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h2>
+        Completed!
+      </h2>
+      <ul />
+    </div>
+  </div>
+</DocumentFragment>
+`;

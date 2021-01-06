@@ -2,8 +2,15 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App component', () => {
+  it('renders Todo List', () => {
+    render(<App />);
+    const todoElement = screen.getByText(/todo list/i);
+    expect(todoElement).toBeInTheDocument();
+  });
+
+  it('renders App', () => {
+    const { asFragment } = render(<App />);
+    expect(asFragment()).toMatchSnapshot();
+  })
 });
