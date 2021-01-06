@@ -2,10 +2,11 @@ import React from 'react';
 import { Todo } from '../App';
 
 interface TodoListProps {
-  todos: Todo[]
+  todos: Todo[],
+  setTodos: any
 };
 
-export default function TodoList({ todos }: TodoListProps) {
+export default function TodoList({ todos, setTodos }: TodoListProps) {
 
   const todosInProgress = todos.filter((todo) => {
     return !todo.isDone;
@@ -14,6 +15,8 @@ export default function TodoList({ todos }: TodoListProps) {
   function updateCheckedItem(todo: Todo) {
     todo.isDone = !todo.isDone;
     todos[todo.id] = todo;
+
+    setTodos([...todos])
   }
 
   return (

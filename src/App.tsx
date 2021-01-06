@@ -40,7 +40,7 @@ function App() {
     <div>
       <Header />
       <TodoInput addTodo={addTodo} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} setTodos={setTodos} />
       <CompletedList todos={todos} />
     </div>
   );
