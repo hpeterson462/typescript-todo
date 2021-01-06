@@ -7,18 +7,22 @@ interface CompletedListProps {
 
 export default function CompletedList({ todos }: CompletedListProps) {
 
+  const todosCompleted = todos.filter((todo) => {
+    return todo.isDone;
+  })
+
   return (
     <div>
       <h2>Completed!</h2>
       <ul>
-        {todos.map((todo) => {
+        {todosCompleted.map((todo) => {
           return (
             <li key={todo.id}>
               <input type="checkbox"
                 defaultChecked={todo.isDone}
                 disabled
               />
-            Laundry
+              {todo.description}
             </li>
           )
         })}

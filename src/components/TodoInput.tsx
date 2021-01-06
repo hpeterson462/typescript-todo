@@ -8,7 +8,6 @@ interface TodoInputProps {
 export default function TodoInput({ addTodo }: TodoInputProps) {
 
   const todoObj: Todo = new Todo();
-
   const [todo, setTodo] = useState(todoObj);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -18,6 +17,7 @@ export default function TodoInput({ addTodo }: TodoInputProps) {
   function handleSubmit(e: any) {
     e.preventDefault();
     console.log('todo: ', todo);
+    addTodo(todo);
     setTodo(todoObj);
   }
 

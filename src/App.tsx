@@ -7,13 +7,13 @@ import TodoList from './components/TodoList';
 import CompletedList from './components/CompletedList';
 
 export interface ITodo {
-  id: string;
+  id: any;
   description: string;
   isDone: boolean;
 }
 
 export class Todo implements ITodo {
-  id: string;
+  id: any;
   description: string;
   isDone: boolean;
 
@@ -27,8 +27,7 @@ export class Todo implements ITodo {
 function App() {
 
   const newTodos = [
-    new Todo('Laundry'),
-    new Todo('Wash dishes')
+    new Todo('')
   ];
 
   const [todos, setTodos] = useState(newTodos);
