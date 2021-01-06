@@ -1,9 +1,36 @@
 import React from 'react';
+import { v4 as uuid } from 'uuid';
 
 export default function TodoList() {
+
+  const todos = [
+    {
+      id: uuid(),
+      description: 'Laundry',
+      isDone: true
+    },
+    {
+      id: uuid(),
+      description: 'Wash dishes',
+      isDone: true
+    }
+  ]
+
   return (
     <div>
-      <p>Todo List</p>
+      <h2>Todo</h2>
+      <ul>
+        {todos.map((todo) => {
+          return (
+            <li key={todo.id}>
+              <input type="checkbox"
+                defaultChecked={todo.isDone}
+              />
+              Laundry
+            </li>
+          )
+        })}
+      </ul>
     </div>
   )
 }
