@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { v4 as uuid } from 'uuid';
 import Header from './components/Header';
@@ -25,12 +25,20 @@ export class Todo implements ITodo {
 }
 
 function App() {
+
+  const newTodos = [
+    new Todo('Laundry'),
+    new Todo('Wash dishes')
+  ];
+
+  const [todos, setTodos] = useState(newTodos);
+
   return (
     <div>
       <Header />
       <TodoInput />
-      <TodoList />
-      <CompletedList />
+      <TodoList todos={todos} />
+      <CompletedList todos={todos} />
     </div>
   );
 }
