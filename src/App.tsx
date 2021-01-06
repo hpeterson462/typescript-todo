@@ -33,10 +33,14 @@ function App() {
 
   const [todos, setTodos] = useState(newTodos);
 
+  function addTodo(todo: Todo) {
+    setTodos([todo, ...todos]);
+  }
+
   return (
     <div>
       <Header />
-      <TodoInput />
+      <TodoInput addTodo={addTodo} />
       <TodoList todos={todos} />
       <CompletedList todos={todos} />
     </div>

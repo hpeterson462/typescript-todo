@@ -1,6 +1,11 @@
 import React from 'react';
+import { Todo } from '../App';
 
-export default function TodoList() {
+interface TodoListProps {
+  todos: Todo[]
+};
+
+export default function TodoList({ todos }: TodoListProps) {
 
   return (
     <div>

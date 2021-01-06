@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { Todo } from '../App';
 
-export default function TodoInput() {
+interface TodoInputProps {
+  addTodo: any
+}
+
+export default function TodoInput({ addTodo }: TodoInputProps) {
 
   const todoObj: Todo = new Todo();
 

@@ -1,20 +1,11 @@
 import React from 'react';
-import { v4 as uuid } from 'uuid';
+import { Todo } from '../App';
 
-export default function CompletedList() {
+interface CompletedListProps {
+  todos: Todo[]
+};
 
-  const todos = [
-    {
-      id: uuid(),
-      description: 'Laundry',
-      isDone: true
-    },
-    {
-      id: uuid(),
-      description: 'Wash dishes',
-      isDone: true
-    }
-  ];
+export default function CompletedList({ todos }: CompletedListProps) {
 
   return (
     <div>
