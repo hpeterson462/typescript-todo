@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import './';
 import { v4 as uuid } from 'uuid';
 import Header from './components/Header';
 import TodoInput from './components/TodoInput';
