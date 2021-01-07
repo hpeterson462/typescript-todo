@@ -40,7 +40,7 @@ function App() {
     <div>
       <Header />
       <TodoInput addTodo={addTodo} />
-      <div className="flex flex-col justify-center m-10 p-2 bg-gradient-to-r from-blue-400 rounded-md shadow-md md:flex-row">
+      <div className="flex flex-col justify-center m-10 p-2 bg-gradient-to-r from-red-500 via-yellow-400 to-pink-500 rounded-md shadow-md md:flex-row">
         <TodoList todos={todos} setTodos={setTodos} />
         <CompletedList todos={todos} />
       </div>
