@@ -22,15 +22,16 @@ export default function TodoInput({ addTodo }: TodoInputProps) {
   }
 
   return (
-    <form id="todo-input" onSubmit={handleSubmit}>
+    <form className="flex justify-center" onSubmit={handleSubmit}>
       <input
+        className="m-10 p-2 w-4/12 bg-gray-100 rounded-md focus:ring-2 focus:ring-blue-400"
         type="text"
         name="todo"
         value={todo.description}
         placeholder="Add new item"
         onChange={handleChange}
       />
-      <button type="submit">Add</button>
+      <button className="m-10 p-2 bg-red-100 rounded-md shadow-md transition duration-500 ease hover:bg-red-400 hover:cursor-pointer" type="submit">Add</button>
     </form>
   )
 }

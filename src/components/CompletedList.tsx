@@ -12,13 +12,15 @@ export default function CompletedList({ todos }: CompletedListProps) {
   })
 
   return (
-    <div>
-      <h2>Completed!</h2>
+    <div className="w-3/12">
+      <h2 className="m-10 text-3xl tracking-wide">Completed!</h2>
       <ul>
         {todosCompleted.map((todo) => {
           return (
-            <li key={todo.id}>
-              <input type="checkbox"
+            <li className="m-10 text-xl tracking-wide" key={todo.id}>
+              <input
+                className="m-2"
+                type="checkbox"
                 defaultChecked={todo.isDone}
                 disabled
               />

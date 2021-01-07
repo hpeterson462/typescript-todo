@@ -40,8 +40,10 @@ function App() {
     <div>
       <Header />
       <TodoInput addTodo={addTodo} />
-      <TodoList todos={todos} setTodos={setTodos} />
-      <CompletedList todos={todos} />
+      <div className="flex flex-col justify-center m-10 p-2 bg-gradient-to-r from-blue-400 rounded-md shadow-md md:flex-row">
+        <TodoList todos={todos} setTodos={setTodos} />
+        <CompletedList todos={todos} />
+      </div>
     </div>
   );
 }
